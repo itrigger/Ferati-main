@@ -1,0 +1,125 @@
+p {
+	margin: 0 0 18px
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 35px;
+}
+h2 {
+  font-size: 30px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 18px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+.date{
+  font-size: 12px;
+  color: $light-grey;
+  font-style: italic;
+}
+a{
+  outline: none;
+  color: $link-color;
+  border-bottom: 1px solid;
+  border-color: rgba($link-color,0.6);
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    border-bottom-color: transparent;
+  }
+}
+abbr{
+  border-bottom: 1px dotted #231F20;
+  cursor: help;
+}
+.nolink{
+  border-bottom: none;
+}
+table{
+  width: 100%;
+  td{
+    vertical-align: top;
+  }
+}
+
+dl {
+   margin-left: -20px;
+}
+dt {
+    float: left;
+}
+dd {
+    display: block;
+    margin: 0 0 0.5em 1.5em;
+}
+ ul{
+   li{
+     margin-bottom: 10px;
+   }
+}
+.gray{
+  color: #808184;
+}
+
+small{
+  font-size: 12px;
+  font-style: italic;
+
+}
+
+.error{
+  font-size: 12px;
+  color: #8F0000;
+  display: block;
+}
+
+.responsive{
+  p{
+    width: 70%;
+  }
+  p{
+    @media screen and (max-width: 1280px) {
+    width: 100%;
+    }
+  }
+}
+
+
+.responsiveme{
+  width: 70%;
+  @media screen and (max-width: 1280px) {
+    width: 100%;
+  }
+}
+
+.ureaded a{
+  color: $main-color;
+}
+
+#success_message{
+  bottom: -30px;
+  font-weight: bold;
+  left: 130px;
+  position: absolute;
+  top: 8px;
+}
+
+.pseudo{
+  color: $link-color;
+  border-bottom: 1px dotted rgba($link-color,0.6);
+  cursor: pointer;
+}

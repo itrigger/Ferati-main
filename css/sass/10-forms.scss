@@ -1,0 +1,57 @@
+input {
+	vertical-align: middle;
+}
+
+input[type=text], textarea, input[type=password], input[type=email]{
+  padding: 7px 10px;
+  font: 14px/20px Tahoma, Arial, Verdana, sans-serif;
+}
+
+.form-elements{
+  position: relative;
+  margin-bottom: 7px;
+  label{
+    display: block;
+    margin-bottom: 4px;
+  }
+  input{
+    display: block;
+    border: 1px solid #BCBEC0;
+  }
+  input[type=text]{
+    width: 220px;
+  }
+  textarea{
+    width: 297px;
+    height: 105px;
+  }
+  input[type=file]{
+    border: none;
+  }
+}
+
+
+/* StartStyle */
+.file-input-box,.file-input-box input{overflow:hidden;}
+.file-input-box{position:relative;width:240px; background: url("/static/layout/i/browse.png") no-repeat right top; padding-top: 3px;
+cursor:pointer;}
+.file-input-text{float:left;line-height:20px;width:127px; height: 18px;
+ padding: 7px 10px;
+}
+.file-input{position:absolute;right:0px;top:0px;width:81px;height:22px;font-size:99px;opacity:0;filter:alpha(opacity=0);cursor:pointer;}
+* html .file-input{filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);}
+/* EndStyle */
+
+
+.form-inline{
+  display: inline-block;
+  float: left;
+  width: 238px;
+  input[type=text]{
+    width: 216px;
+  }
+ .file-input-text{
+   width: 127px;
+ }
+
+}

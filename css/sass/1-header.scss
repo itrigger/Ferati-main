@@ -1,0 +1,40 @@
+.h{
+  background-color: #F8ED31;
+  padding: 25px 0;
+  .max-width-wrap{
+    position: relative;
+  }
+
+}
+.herror{
+  background: none;
+  border-bottom: 4px solid #F8ED31;
+}
+
+.logo{
+  width: 194px;
+  height: 50px;
+  position: relative;
+  float: left;
+  a{
+    display: block;
+    width: 194px;
+    height: 50px;
+    padding: 0;
+    background: url('../i/logob.png') no-repeat center;
+  }
+}
+
+
+
+.topcontact{
+  display: inline-block;
+  position: relative;
+  right: 15px;
+  text-align: right;
+/*  line-height: 25px;*/
+  position: absolute;
+  top: -10px;
+  font-size: 13px;
+}
+

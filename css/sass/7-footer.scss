@@ -1,0 +1,22 @@
+.f:before{
+    background: url("/static/layout/i/zigzag.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    content: " ";
+    display: block;
+    height: 5px;
+    margin-bottom: -5px;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+
+.footer-logo{
+  background: url("/static/layout/i/sprite.png") no-repeat scroll -53px -111px rgba(0, 0, 0, 0);
+  display: block;
+  height: 30px;
+  left: -5px;
+  position: relative;
+  top: -10px;
+  width: 127px;
+  margin-bottom: -4px;
+}

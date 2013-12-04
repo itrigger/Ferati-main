@@ -1,0 +1,57 @@
+<article>
+    <figure>
+         <img src="" width="320" height="175" alt="">
+         <a href="#" class="get-video" data-video="video-01">Смотреть аппарат в работе</a>
+    </figure>
+    <section>
+        <header>Название аппарата 2</header>
+        <p class="description"></p>
+        <div class="sliderkit tabs-standard">
+        	<div class="sliderkit-nav">
+        		<div class="sliderkit-nav-clip">
+        			<ul>
+        				<li><a href="#" title="[link title]">Характеристики</a></li>
+        				<li><a href="#" title="[link title]">Оснащение</a></li>
+        				<li><a href="#" title="[link title]">Руководство пользователя</a></li>
+        			</ul>
+        		</div>
+        	</div>
+        	<div class="sliderkit-panels">
+        		<div class="sliderkit-panel">
+        					<p>
+                                    111111111111f<br>asd fasd fasdf asdf<br>sdfasdпотребляем sdfa аfasdfasdfя asdf, кВт: 7.4<br>Диапазон регулирasdfasdf aования сварочного тока (220/380), А: 55-160<br>Цикл работы , %/А: 10/160
+                                </p>
+        		</div>
+        		<div class="sliderkit-panel">
+        			<p>
+                                    — медная обмотка трансформаторной катушки<br>— визуальный контроль силы сварочного тока<br>— плавная регулировка сварочного режима в широком диапазоне токов<br>— принудительное воздушное охлаждение<br>— защита от перегрузки
+                                </p>
+        			</div>
+        		<div class="sliderkit-panel">
+        			<p>Скачать руководство (~ 6 Мб)</p>
+        		</div>
+        	</div>
+        </div>
+    </section>
+    <div class="nextslide">Next</div>
+    <div class="prevslide">Prev</div>
+</article>
+
+<script>
+    $(".tabs-standard").sliderkit({
+      auto:false,
+      tabs:true,
+      mousewheel:false,
+      circular:true,
+      panelfx:"none"
+    });
+
+
+    $(".nextslide").on("click", function(){
+          changeitem("30");
+    });
+    $(".prevslide").on("click", function(){
+          changeitem("10");
+    });
+
+</script>

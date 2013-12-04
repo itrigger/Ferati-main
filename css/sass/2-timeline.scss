@@ -1,0 +1,22 @@
+.timeline{
+  & > ul > li{
+    display: inline-block;
+
+    span{
+      border-bottom: 1px solid #333;
+      display: block;
+      padding-left: 20px;
+    }
+  }
+
+ ul li ul li{
+    background: #E76D13;
+    display: inline-block;
+    text-align: left;
+    margin-left: 20px;
+    cursor: pointer;
+ }
+ li.active>span{
+   font-weight: bold;
+ }
+}

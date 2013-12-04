@@ -1,0 +1,75 @@
+@import "compass/css3";
+@import "0-vars";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+	height: 100%;
+    /*overflow-y:scroll;*/
+}
+header, nav, section, article, aside, footer {
+	display: block;
+}
+
+img {
+	border: none;
+}
+body {
+	font: 14px/20px Arial, Verdana, sans-serif;
+	width: 100%;
+	height: 100%;
+    color: $main-color;
+    background-color: #F1F2F2;
+}
+
+
+
+
+@import "0-typo";
+@import "0-wareframe";
+@import "9-buttons";
+@import "10-forms";
+@import "8-elements";
+@import "1-header";
+@import "2-timeline";
+@import "3-mainslider";
+@import "4-about-block";
+@import "5-whereget";
+@import "6-contacts-block";
+@import "7-footer";
+@import "11-modal";
+@import "12-lightbox";

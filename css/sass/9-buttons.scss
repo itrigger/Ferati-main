@@ -1,0 +1,41 @@
+.btn-grey{
+  background-color: #58595B;
+  border: none;
+  border-bottom: 3px solid #000 !important;
+  color: #E6E7E8;
+  padding: 7px 14px;;
+  font-weight: bold;
+  cursor: pointer;
+  @include text-shadow(rgba(0,0,0,0.6) 0 1px 1px);
+  @include box-shadow(rgba(0,0,0,0.3) 0 3px 3px);
+  &:hover{
+    border-bottom-color: rgba(#000,0.4) !important;
+    color: #E6E7E8;
+  }
+}
+.btn-white{
+  background-color: #F1F2F2;
+  border-bottom: 3px solid #BCBEC0;
+  color: #414042;
+  padding: 7px 14px;;
+  font-weight: bold;
+  @include box-shadow(rgba(0,0,0,0.3) 0 3px 3px);
+  &:hover{
+     border-bottom-color: rgba(#BCBEC0,0.4) !important;
+  }
+}
+.btn-contur{
+  padding: 7px 14px;
+  color: #414042;
+  border: 2px solid #58595B;
+  &:hover{
+     background-color: #58595B;
+    border-bottom: 3px solid #000;
+    color: #E6E7E8;
+    padding: 7px 14px;;
+
+    @include text-shadow(rgba(0,0,0,0.6) 0 1px 1px);
+    @include box-shadow(rgba(0,0,0,0.3) 0 3px 3px);
+
+  }
+}

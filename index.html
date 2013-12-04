@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Codename Ferati</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/stylesheets/screen.css">
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/easing.js"></script>
+  <script src="js/mdrnzr.js"></script>
+  <script src="js/ferati.js"></script>
+  <script src="js/jquery.sliderkit.1.9.2.pack.js"></script>
+  <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+  <script src="js/lightbox.js"></script>
+  <!--[if lt IE 9]><script src="dist/html5shiv.js"></script><![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+<noscript>
+  <section class="js-alert">
+      На сайте активно используется JavaScript. У Вас он отключен. Настоятельно рекомендуем включить его, для корректной работы.
+  </section>
+</noscript>
+<header class="header">
+    <div class="logo"></div>
+    <nav>
+        <ul class="topmenu">
+            <li><a href="#about" class="slidedown">О Ferati</a></li>
+            <li><a href="#whereget" class="slidedown">Где купить</a></li>
+            <li><a href="#contact-block" class="slidedown">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="topcontact">
+        <small>Справочно-информационный центр</small>
+        <p>8 800 080 9119</p>
+        <small>Звонок бесплатный</small>
+    </div>
+</header>
+
+<!-- TIMELINE -->
+<section class="timeline">
+   <ul>
+      <li class="parent active"><span>Тип 1</span>
+            <ul>
+                 <li class="active" data-item="10"><span>Модель 1</span></li>
+                 <li data-item="20"><span>Модель 2</span></li>
+                 <li data-item="30"><span>Модель 3</span></li>
+            </ul>
+       </li><li class="parent"><span>Тип 2</span>
+            <ul>
+                 <li data-item="100"><span>Моде we wweль 1</span></li>
+                 <li data-item="120"><span>Модель 2</span></li>
+                 <li data-item="130"><span>Модель 3</span></li>
+                 <li data-item="140"><span>Моделeeeь 4</span></li>
+                 <li data-item="150"><span>Модель 5</span></li>
+            </ul>
+       </li><li class="parent"><span>Тип 3</span>
+            <ul>
+                 <li data-item="210"><span>Модель 1</span></li>
+                 <li data-item="220"><span>Модель 2</span></li>
+                 <li data-item="230"><span>Модель 3</span></li>
+                 <li class="helper"></li>
+            </ul>
+       </li>
+   </ul>
+</section>
+<div class="clear"></div>
+<!-- ######## TIMELINE -->
+
+<!-- MAINSLIDER -->
+<section class="mainslider">
+    <article>
+        <figure>
+             <img src="" width="320" height="175" alt="">
+             <a href="#" class="get-video" data-video="video-01">Смотреть аппарат в работе</a>
+        </figure>
+        <section>
+            <header>Название аппарата</header>
+            <p class="description"></p>
+            <div class="sliderkit tabs-standard">
+            	<div class="sliderkit-nav">
+            		<div class="sliderkit-nav-clip">
+            			<ul>
+            				<li><a href="#" title="[link title]">Характеристики</a></li>
+            				<li><a href="#" title="[link title]">Оснащение</a></li>
+            				<li><a href="#" title="[link title]">Руководство пользователя</a></li>
+            			</ul>
+            		</div>
+            	</div>
+            	<div class="sliderkit-panels">
+            		<div class="sliderkit-panel">
+            					<p>
+                                        Класс защиты: IP 21<br>Номинальное напряжение (50Гц), кол-во фаз, В: 220-1ф<br>Максимальная потребляемая мощность, кВт: 7.4<br>Диапазон регулирования сварочного тока (220/380), А: 55-160<br>Цикл работы , %/А: 10/160
+                                    </p>
+            		</div>
+            		<div class="sliderkit-panel">
+            			<p>
+                                        — медная обмотка трансформаторной катушки<br>— визуальный контроль силы сварочного тока<br>— плавная регулировка сварочного режима в широком диапазоне токов<br>— принудительное воздушное охлаждение<br>— защита от перегрузки
+                                    </p>
+            			</div>
+            		<div class="sliderkit-panel">
+            			<p>Скачать руководство (~ 6 Мб)</p>
+            		</div>
+            	</div>
+            </div>
+        </section>
+        <div class="nextslide">Следующий <small>на 2кВТ мощнее</small></div>
+    </article>
+    <script>
+    $(".tabs-standard").sliderkit({
+      auto:false,
+      tabs:true,
+      mousewheel:false,
+      circular:true,
+      panelfx:"none"
+    });
+
+    $(".nextslide").on("click", function(){
+      changeitem("20");
+    });
+    </script>
+</section>
+<div class="clear"></div>
+<!-- ######## MAINSLIDER -->
+
+<!-- ABOUT-BLOCK -->
+<section class="about-block">
+  <div class="col-2 col-2-1">
+      <article>
+        <a id="about"></a>
+        <h1>О Ferati</h1>
+        <p>Легенда о ТМ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Легенда о ТМ. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        </p>
+      </article>
+      <ul class="certificates">
+          <li><span id="#example1" class="m-dotted" onclick="$('#exampleModal1').arcticmodal()">Сертификат 1</span></li>
+          <li><span id="#example2" class="m-dotted" onclick="$('#exampleModal2').arcticmodal()">Сертификат 1</span></li>
+          <li><span id="#example3" class="m-dotted" onclick="$('#exampleModal3').arcticmodal()">Сертификат 1</span></li>
+          <li><span id="#example4" class="m-dotted" onclick="$('#exampleModal4').arcticmodal()">Сертификат 1</span></li>
+
+          <div class="hidden">
+            <div id="exampleModal1" class="box-modal">
+              <div class="box-modal_close arcticmodal-close">×</div>
+              Пример простого модального окна 1
+            </div>
+            <div id="exampleModal2" class="box-modal">
+              <div class="box-modal_close arcticmodal-close">×</div>
+              Пример простого модального окна 2
+            </div>
+            <div id="exampleModal3" class="box-modal">
+              <div class="box-modal_close arcticmodal-close">×</div>
+              Пример простого модального окна 3
+            </div>
+            <div id="exampleModal4" class="box-modal">
+              <div class="box-modal_close arcticmodal-close">×</div>
+              Пример простого модального окна 4
+            </div>
+          </div>
+      </ul>
+      <section class="photos">
+          <header>Фотографии</header>
+          <figure><a href="i/examples/image-1.jpg" rel="lightbox[roadtrip]"><img src="i/examples/thumb-1.jpg"></a>  </figure>
+          <figure><a href="i/examples/image-2.jpg" rel="lightbox[roadtrip]"><img src="i/examples/thumb-2.jpg"></a>  </figure>
+          <figure><a href="i/examples/image-3.jpg" rel="lightbox[roadtrip]"><img src="i/examples/thumb-3.jpg"></a>  </figure>
+          <figure><a href="i/examples/image-4.jpg" rel="lightbox[roadtrip]"><img src="i/examples/thumb-4.jpg"></a>  </figure>
+      </section>
+  </div>
+  <div class="col-2 col-2-2">
+     Ролик с вимео
+  </div>
+</section>
+<div class="clear"></div>
+<!-- ######## ABOUT-BLOCK -->
+
+<!-- WHEREGET -->
+<a id="whereget"></a>
+<section class="whereget">
+<h2>Где купить</h2>
+     <div class="col-5-1">
+        <div class="address">
+          <div class="name">Город 1</div>
+          <div class="point">Адрес</div>
+        </div>
+        <div class="address">
+          <div class="name">Город 2</div>
+          <div class="point">Адрес</div>
+        </div>
+     </div>
+     <div class="col-5-2">
+        <div class="address">
+          <div class="name">Город 3</div>
+          <div class="point">Адрес</div>
+        </div>
+        <div class="address">
+          <div class="name">Город 4</div>
+          <div class="point">Адрес</div>
+        </div>
+     </div>
+     <div class="col-5-3">
+        <div class="address">
+          <div class="name">Город 5</div>
+          <div class="point">Адрес</div>
+        </div>
+        <div class="address">
+          <div class="name">Город 6</div>
+          <div class="point">Адрес</div>
+        </div>
+     </div>
+     <div class="col-5-4">
+        <div class="address">
+          <div class="name">Город 7</div>
+          <div class="point">Адрес</div>
+        </div>
+        <div class="address">
+          <div class="name">Город 8</div>
+          <div class="point">Адрес</div>
+        </div>
+     </div>
+     <div class="col-5-5">
+        <a class="get-map" href="#">Найти ближайший город на карте</a>
+     </div>
+</section>
+<div class="clear"></div>
+<!-- ######## WHEREGET -->
+
+<!-- CONTACTS-BLOCK -->
+<a id="contact-block"></a>
+<section class="contacts-block">
+  <div class="col-2 col-2-1">
+     <h3>Контакты</h3>
+     <p>адреса</p>
+     карта
+  </div>
+  <div class="col-2 col-2-2">
+  <form id="contact" name="contact" action="#" method="post">
+        <div class="form-inline">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name">
+            <div id="err_name"></div>
+        </div>
+
+        <div class="form-inline">
+            <label for="email">Ваш E-mail</label>
+            <input type="text" id="email" name="email">
+            <div id="err_mail"></div>
+        </div>
+
+        <div class="form-inline">
+            <label for="tel">Введите телефон</label>
+            <input type="text" id="tel" name="tel">
+            <div id="err_tel"></div>
+        </div>
+
+        <div class="form-inline">
+            <label for="msg">Введите сообщение</label>
+            <textarea id="msg" name="msg"></textarea>
+            <div id="err_msg"></div>
+        </div>
+        <button id="send" type="submit" class="btn btn-send">Отправить</button>
+        <div class="error-block">Заполните поля: <span class="need-name pseudo">имя,</span> <span class="need-email pseudo">e-mail,</span> <span class="need-tel pseudo">телефон,</span> <span class="need-text pseudo">текст сообщения</span></div>
+    </form>
+
+  </div>
+</section>
+<div class="clear"></div>
+<!-- ######## CONTACTS-BLOCK -->
+<div class="hidden">
+  <div id="errorModal" class="box-modal">
+    <div class="box-modal_close arcticmodal-close">×</div>
+    Приносим свои извенения, произошла ошибка, товар не найдет. Вы можете посмотреть и заказать сварочные аппараты <a href="http://temp-tools.kz/">в нашем интернет-магазине</a>
+  </div>
+</div>
+
+<footer class="footer">
+<br><br><br><br><br><br><br><br>
+</footer>
+</div>
+</body>
+</html>

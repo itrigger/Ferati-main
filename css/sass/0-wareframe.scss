@@ -1,0 +1,56 @@
+#wrapper{
+    width: 100%;
+	min-width: 950px;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+section, header, footer{
+  padding: 0 15px;
+}
+
+.max-width-wrap{
+  max-width: 1920px;
+  min-width: 950px;
+  margin: 0 auto;
+}
+
+
+hr{
+  border: none;
+  border-bottom: 1px solid rgba(#808184,0.4);
+}
+
+
+#tabs2 .tabs_h {
+    display: inline-block;
+    margin-left: -4px;
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 2px 5px 5px;
+    margin-bottom: 15px;
+    span{
+        border-bottom: 1px dotted #333;
+    }
+}
+#tabs2 .tabs_h.active{
+  background-color: #F2CF00;
+      font-weight: normal;
+}
+
+#tabs2 .tabs.active {
+    display: block;
+    opacity: 1;
+}
+#tabs2 .tabs {
+    display: none;
+    margin: 3px 0 0;
+    opacity: 0;
+    position: relative;
+    padding: 0px;
+    border: none;
+}
+
+#tabs2{
+  text-align: left;
+  display: block;
+}
