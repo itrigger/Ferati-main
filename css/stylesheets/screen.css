@@ -208,10 +208,8 @@ section, header, footer {
   padding: 0 15px;
 }
 
-.max-width-wrap {
-  max-width: 1920px;
-  min-width: 950px;
-  margin: 0 auto;
+.mainslider {
+  overflow-x: hidden;
 }
 
 hr {
