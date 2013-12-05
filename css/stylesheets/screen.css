@@ -372,8 +372,8 @@ input[type=text], textarea, input[type=password], input[type=email] {
 
 /* EndStyle */
 .form-inline {
-  display: inline-block;
-  float: left;
+  /*  display: inline-block;
+    float: left;*/
   width: 238px;
 }
 .form-inline input[type=text] {
@@ -381,6 +381,14 @@ input[type=text], textarea, input[type=password], input[type=email] {
 }
 .form-inline .file-input-text {
   width: 127px;
+}
+
+.comma:after {
+  content: ",";
+}
+
+.error-block .comma:last-child {
+  font-weight: bold;
 }
 
 .margintop0 {

@@ -126,11 +126,19 @@ $(document).ready(function(){ /*документ готов начало*/
 
     /*Валидатор формы*/
     function hideerror(){
-      if(($(".error-block").html().indexOf("inline"))>=0){
-        $(".error-block").css("display","block");
+      if(($(".error-block").find(".hidden").length)>3){
+        $(".error-block").addClass("hidden");
       } else {
-        $(".error-block").css("display","none");
+        $(".error-block").removeClass("hidden");
       }
+      $(".error-block span.pseudo").each(function(e){
+          if(!($(this).hasClass("hidden"))){
+            $(this).addClass("comma");
+          } else {
+            $(this).removeClass("comma");
+          }
+      });
+      $(".error-block span.comma:last").removeClass("comma");
     }
 
 
@@ -140,50 +148,42 @@ $(document).ready(function(){ /*документ готов начало*/
     $("#contact").on("click", ".need-tel", function(){  $("#tel").focus(); });
     $("#contact").on("click", ".need-text", function(){  $("#msg").focus(); });
     /*при загрузке скрываем подсказки если поля не пустые*/
-    if($("#name").val() == ""){$(".error-block .need-name").css("display","inline");} else {$(".error-block .need-name").css("display","none");}
-    if($("#email").val() == ""){$(".error-block .need-email").css("display","inline");} else {$(".error-block .need-email").css("display","none");}
-    if($("#tel").val() == ""){$(".error-block .need-tel").css("display","inline");} else {$(".error-block .need-tel").css("display","none");}
-    if($("#msg").val() == ""){$(".error-block .need-text").css("display","inline");} else {$(".error-block .need-text").css("display","none");}
+    if($("#name").val() == ""){$(".error-block .need-name").removeClass("hidden");} else {$(".error-block .need-name").addClass("hidden");}
+    if($("#email").val() == ""){$(".error-block .need-email").removeClass("hidden");} else {$(".error-block .need-email").addClass("hidden");}
+    if($("#tel").val() == ""){$(".error-block .need-tel").removeClass("hidden");} else {$(".error-block .need-tel").addClass("hidden");}
+    if($("#msg").val() == ""){$(".error-block .need-text").removeClass("hidden");} else {$(".error-block .need-text").addClass("hidden");}
     /*отменяем станадртную функцию отправки формы*/
 
     hideerror();
     $("#contact").on("submit", function() { return false; });
 
     /*Валидация поля с мылом при нажатии клавиш*/
-    $("#email").on("keypress", function(){
+   /* $("#email").on("keypress", function(){
        var emailval  = $("#email").val();
        var mailvalid = validateEmail(emailval);
        if(mailvalid == false) {
-    		$("#email").addClass("error");
-            $("#err_mail").css("display","block").html("Неправильное написание e-mail!");
-            $(".error-block .need-email").css("display","inline");
+            $(".error-block .need-email").removeClass("hidden");
        }
        else if(mailvalid == true){
-    		$("#email").removeClass("error");
-            $("#err_mail").remove();
-            $(".error-block .need-email").css("display","none");
+            $(".error-block .need-email").addClass("hidden");
        }
        hideerror();
-    });
+    });   */
 
     /*Валидация поле с телефоном при нажатии клавиш*/
-    $("#tel").on("keypress", function(){
+   /* $("#tel").on("keypress", function(){
        var telval    = $("#tel").val();
        var tellen    = telval.length;
        var telvalid  = validateTel(telval);
        if(telvalid == false) {
-    		$("#tel").addClass("error");
-            $("#err_tel").css("display","block").html("Неправильный номер телефона!");
-            $(".error-block .need-tel").css("display","inline");
+            $(".error-block .need-tel").removeClass("hidden");
        }
        else if(telvalid == true){
-    		$("#tel").removeClass("error");
-            $("#err_tel").remove();
-            $(".error-block .need-tel").css("display","none");
+            $(".error-block .need-tel").addClass("hidden");
        }
        hideerror();
     });
-
+    */
     /*Обработка клика по кнопке Отправить*/
     $("#send").on("click", function(){
         var nameval   = $("#name").val();
@@ -199,45 +199,45 @@ $(document).ready(function(){ /*документ готов начало*/
         if(namelen < 2) {
     	    $("#name").addClass("error");
             $("#err_name").css("display","block").html("Вы не ввели имя!");
-            $(".error-block .need-name").css("display","inline");
+            $(".error-block .need-name").removeClass("hidden");
     	}
     	else if(namelen >= 2){
     		$("#name").removeClass("error");
             $("#err_name").remove();
-            $(".error-block .need-name").css("display","none");
+            $(".error-block .need-name").addClass("hidden");
     	}
 
     	if(mailvalid == false) {
     		$("#email").addClass("error");
             $("#err_mail").css("display","block").html("Неправильное написание e-mail!");
-            $(".error-block .need-email").css("display","inline");
+            $(".error-block .need-email").removeClass("hidden");
     	}
     	else if(mailvalid == true){
     		$("#email").removeClass("error");
             $("#err_mail").remove();
-            $(".error-block .need-email").css("display","none");
+            $(".error-block .need-email").addClass("hidden");
     	}
 
         if(telvalid == false) {
     		$("#tel").addClass("error");
             $("#err_tel").css("display","block").html("Неправильный номер телефона!");
-            $(".error-block .need-tel").css("display","inline");
+            $(".error-block .need-tel").removeClass("hidden");
     	}
     	else if(telvalid == true){
     		$("#tel").removeClass("error");
             $("#err_tel").remove();
-            $(".error-block .need-tel").css("display","none");
+            $(".error-block .need-tel").addClass("hidden");
     	}
 
     	if(msglen < 4) {
     		$("#msg").addClass("error");
             $("#err_msg").css("display","block").html("Введите сообщение!");
-            $(".error-block .need-text").css("display","inline");
+            $(".error-block .need-text").removeClass("hidden");
     	}
     	else if(msglen >= 4){
     		$("#msg").removeClass("error");
             $("#err_msg").remove();
-            $(".error-block .need-text").css("display","none");
+            $(".error-block .need-text").addClass("hidden");
     	}
     	if(telvalid == true && mailvalid == true && msglen >= 4 && namelen >=2) {
     		$("#send").text("отправка...");

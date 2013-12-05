@@ -44,8 +44,8 @@ cursor:pointer;}
 
 
 .form-inline{
-  display: inline-block;
-  float: left;
+/*  display: inline-block;
+  float: left;*/
   width: 238px;
   input[type=text]{
     width: 216px;
@@ -54,4 +54,12 @@ cursor:pointer;}
    width: 127px;
  }
 
+}
+
+
+.comma:after{
+  content: ",";
+}
+.error-block .comma:last-child{
+  font-weight: bold;
 }
